@@ -13,4 +13,8 @@ class Getrequester
     result =Net::Http.get_response(uri)
     result.body
   end
+  
+  def parse_json
+    parsejson =JSON.parse(self.get_response_body)
+  end
 end
